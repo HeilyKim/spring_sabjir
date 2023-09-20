@@ -1,0 +1,87 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Hahmlet:wght@600&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;200;300;400&family=Orbit&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+#board-title {
+    margin: 10vh 25vh 0;
+    border-bottom: solid 2px #b8b8b8;
+}
+
+#board-title p {
+    text-align: center;
+    padding: 5px;
+    font-size: 50px;
+    font-weight: 800;
+    color: plum;
+}
+
+body #table-container {
+    margin: 3vh 30vh;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 2vh 0;
+}
+
+.sm {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.sp {
+    width: 1%;
+}
+
+body #table-container .idx {
+    margin-left: 5vh;
+    font-weight: bolder;
+    color: #0E1B48;
+}
+
+img {
+    margin: .5vh 0 .5vh 50px;
+    width: 30vh;
+    height: auto;
+}
+
+.title a {
+    color: #0E1B48;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 100px;
+}
+
+.sm a {
+    color: #0E1B48;
+    line-height: 1.5em;
+    font-size: medium;
+    padding-left: 100px;
+}
+
+.btn {
+    text-align: right;
+    margin-right: 30vh;
+    margin-bottom: 5vh;
+}
+
+.btn a {
+    color: #fff;
+    background-color: palevioletred;
+    padding: 1vh 3vh;
+    border-radius: 5px;
+    font-weight: bold;
+}

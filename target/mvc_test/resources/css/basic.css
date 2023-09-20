@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Hahmlet:wght@600&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;200;300;400&family=Orbit&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    list-style: none;
+}
