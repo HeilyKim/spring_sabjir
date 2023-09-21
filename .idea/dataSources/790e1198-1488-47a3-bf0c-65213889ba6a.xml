@@ -13,7 +13,7 @@
     <schema id="3" parent="1" name="comm">
       <Current>1</Current>
       <Visible>1</Visible>
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="4" parent="1" name="dw_record">
       <Collation>utf8mb4_0900_ai_ci</Collation>
@@ -1133,44 +1133,87 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="286" parent="3" name="com"/>
-    <column id="287" parent="286" name="id">
+    <table id="286" parent="3" name="com">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </table>
+    <table id="287" parent="3" name="reply"/>
+    <column id="288" parent="286" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="286" name="title">
+    <column id="289" parent="286" name="title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="286" name="writer">
+    <column id="290" parent="286" name="writer">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="286" name="content">
+    <column id="291" parent="286" name="content">
       <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="286" name="profile">
+    <column id="292" parent="286" name="profile">
       <Position>5</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="286" name="created_at">
+    <column id="293" parent="286" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="293" parent="286" name="PRIMARY">
+    <key id="294" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="295" parent="287" name="rid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="287" name="rcontent">
+      <Position>2</Position>
+      <DataType>longtext|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="287" name="rcreate_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="287" name="cid">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="299" parent="287" name="fk">
+      <ColNames>cid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="300" parent="287" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="301" parent="287" name="fk">
+      <ColNames>cid</ColNames>
+      <RefSchemaName>comm</RefSchemaName>
+      <RefTableName>com</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

@@ -16,4 +16,19 @@ public class BoardServiceImpl implements BoardService {
     public List<BoardDTO> list() {
         return boardDAO.list();
     }
+
+    @Override
+    public BoardDTO detail(int id) {
+        return boardDAO.detail(id);
+    }
+
+    @Override
+    public void delete(int id) {
+        boardDAO.delete(id);
+    }
+
+    @Override
+    public void insert(BoardDTO boardDTO) {
+        boardDAO.insert(boardDTO);
+    }
 }

@@ -27,7 +27,7 @@
         <tr>
             <td rowspan="2"><a class="idx">${bd.id}</a></td>
             <td rowspan="2" class="sp"><a href=""></a></td>
-            <td class="title"><a href="">${bd.title}</a></td>
+            <td class="title"><a href="/board/detail?id=${bd.id}">${bd.title}</a></td>
             <td><a>🐣${bd.writer}</a><br> <a>${bd.created_at}</a></td>
         </tr>
         <tr class="sm">
@@ -35,7 +35,7 @@
     </table>
 </div>
 <div class="btn">
-    <a href="">글쓰기</a>
+    <a href="/board/write">글쓰기</a>
 </div>
 </body>
 </body>

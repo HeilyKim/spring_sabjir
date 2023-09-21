@@ -11,4 +11,22 @@
         ,created_at
         from com
     </select>
+    <select id="detail" resultType="BoardDTO">
+        select
+        id
+        ,content
+        ,profile
+        ,writer
+        ,created_at
+        from com
+        where id = #{id}
+    </select>
+    <delete id="delete">
+        delete from com
+        where id = #{id}
+    </delete>
+    <insert id="insert" parameterType="BoardDTO" useGeneratedKeys="true" keyProperty="id">
+        insert into com(title, writer, content, profile)
+        values (#{title}, #{writer}, #{content}, #{profile})
+    </insert>
 </mapper>
