@@ -1,15 +1,30 @@
 package com.hl.board.Service;
 
+import com.hl.board.dao.BoardDAO;
 import com.hl.board.dto.BoardDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface BoardService {
-    public List<BoardDTO> list();
+@Service
+public class BoardService {
+    @Autowired
+    BoardDAO boardDAO;
 
-    public BoardDTO detail(int id);
+    public List<BoardDTO> list() {
+        return boardDAO.list();
+    }
 
-    public void delete(int id);
+    public BoardDTO detail(int id) {
+        return boardDAO.detail(id);
+    }
 
-    public void insert(BoardDTO boardDTO);
+    public void delete(int id) {
+        boardDAO.delete(id);
+    }
+
+    public void insert(BoardDTO boardDTO) {
+        boardDAO.insert(boardDTO);
+    }
 }

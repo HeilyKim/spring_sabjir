@@ -18,8 +18,8 @@
     <title>myBoard</title>
 </head>
 <body>
-<div id="board-title">
-    <p>게시판</p>
+<div>
+    <p class="board-title">게시판</p>
 </div>
 <div id="table-container">
     <table>

@@ -10,12 +10,9 @@
     font-family: 'Nanum Gothic', sans-serif;
     list-style: none;
 }
-body #detail {
+.detail p {
     margin: 10vh 35vh 0;
     border-bottom: solid 2px #b8b8b8;
-}
-
-#detail p {
     padding: 5px;
     font-size: 30px;
     font-weight: 800;
@@ -27,7 +24,8 @@ body #table-container {
 }
 
 .contentD,
-.reply {
+.reply,
+.replyWrite{
     margin: 2vh 35vh;
     text-align: center;
 }
@@ -51,7 +49,10 @@ body #table-container {
     text-align: left;
     line-height: 3vh;
 }
-
+button{
+    border: none;
+    background-color: transparent;
+}
 .btn {
     margin-top: 5vh;
     text-align: right;
@@ -59,7 +60,8 @@ body #table-container {
     margin-bottom: 5vh;
 }
 
-.btn a {
+.btn a,
+#replybtn{
     color: #fff;
     background-color: #0E1B48;
     padding: 1vh 3vh;
@@ -70,10 +72,38 @@ body #table-container {
     margin-right: 1.5vh;
 }
 
-.btn a:nth-child(2) {
+#replybtn {
+    background-color:transparent;
     color: #0E1B48;
-    background-color: #b8b8b8;
+    border: 2px solid #0E1B48;
+    font-size:1.5vh;
 }
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
 
 .reply {
     text-align: justify;

@@ -13,5 +13,6 @@ public class ReplyDTO {
     private int rid;
     private int cid;
     private String rcontent;
+    private String rwriter;
     private LocalDateTime rcreated_at;
 }
